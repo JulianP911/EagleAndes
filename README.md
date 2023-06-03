@@ -58,8 +58,13 @@
 <h3>Desarrollo del reto 2:</h3>
 
 <ol>
-  <li>En primer lugar empezamos por el problema de predición de categoria del textos en cuatro categorías: MINERIA, CONTAMINACION, DEFORESTACION, NINGUNA para esto empezamos por un proceso de limpieza de datos, clasificación de textos sin etiquetas en base del contexto para mejorar la precisión de predición a la hora de entrenar el modelo, 
+  <li>En primer lugar empezamos por el problema de predición de categoria del textos en cuatro categorías: MINERIA, CONTAMINACION, DEFORESTACION, NINGUNA para esto empezamos por un proceso de limpieza de datos, re-clasificación de textos que tenían etiquetas distintas a las que estaban establecidas para la solución en base del contexto para mejorar la precisión de predición a la hora de entrenar el modelo, que en este caso nos centramos en un RandomForestClassifier que fue el que mejor nos proporcionó resultados por medio de búsqueda de hiperparámetros con un accuracy con los datos de entrenamiento del 99% y un accuracy con los datos de test de un 84%.
 </li>
-  <li>En segundo lugar continuamos con el procesamiento de lenguage aplicando NER (Identificación de entidades con nombre) para esto utilizamos la libreria de SpaCy con el modelo de es_core_news_md que tiene un f1 89.54 lo cual indica un buen porcentaje de prección en base al recall y accurancy. 
+  <li>Un punto intermedio entre el etiquetado de datos y el modelado de un RandomForest fue el preprocesamiento , en el cuál se realizó todo los tipos de procesos necesarios de limpieza para un modelo lo más óptimo posible cuando se trata de texto. Se realizaron procesos de convertir todos los carácteres a minísculas, convertir a lenguaje natural los números que aparecen en el texto, eliminar la puntuación de las palabras, eliminar los carácteres ASCII, eliminar palabras que no son relevantes en el contexto del problema como por ejemplo artículos personales, se aplicó un proceso de lematización de las palabras  y finalmente se listaron las palabras de manera tokenizada. Todo lo anterior para poder tener un modelo de RandomForest de la mejor manera construida.
+</li> 
+  <li>En tercer lugar, continuamos con el procesamiento de lenguage aplicando NER (Identificación de entidades con nombre) para esto utilizamos la libreria de SpaCy con el modelo de es_core_news_md que tiene un f1 89.54 lo cual indica un buen porcentaje de prección en base al recall y accuracy para 4 de las 5 clases que se pedían obtener una posible clasificación. 
+</li>
+  
+ <li>Finalmente, para la identificación de fechas se creó una fórmula regex para poder identificar este tipo de entidades que tienen muchísimas tipo de variables posibles.
 </li>
 </ol>
