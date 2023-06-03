@@ -24,7 +24,12 @@ INSTALL_REQUIRES = [
     'contractions',
     'inflect',
     'nltk',
-    'wordcloud'
+    'wordcloud',
+    'tensorflow',
+    'numpy',
+    'matplotlib',
+    'Pillow',
+    'opencv-python'
 ]
 
 setup(
