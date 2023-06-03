@@ -29,6 +29,7 @@ INSTALL_REQUIRES = [
     'matplotlib',
     'Pillow',
     'opencv-python',
+    'transformers',
     'es_core_news_md==3.5.0'
 ]
 
