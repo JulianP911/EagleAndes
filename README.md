@@ -4,7 +4,7 @@
 
 <h1>Libreria - Reto 1 - Procesamiento de lenguage (Clasificación y NER)</h1>
 
-<br>Objetivo 2: Identificación de entidades en noticias</br>
+<br><b>Objetivo 2:</b> Identificación de entidades en noticias</br>
 
 <h3>Instrucciones para correr la librería de python:</h3>
 <ul>
