@@ -1,1 +1,1 @@
-from .functions import *
+from .text_recognition import *

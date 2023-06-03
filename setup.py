@@ -15,8 +15,17 @@ LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding='utf-8')
 LONG_DESC_TYPE = "text/markdown"
 
 INSTALL_REQUIRES = [
-      'listado de librerias'
-      ]
+    'urllib3==1.26.6',
+    'pandas',
+    'spacy',
+    'es-core-news-md==3.5.0',
+    'joblib',
+    'scikit-learn',
+    'contractions',
+    'inflect',
+    'nltk',
+    'wordcloud'
+]
 
 setup(
     name=PACKAGE_NAME,
