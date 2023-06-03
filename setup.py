@@ -18,7 +18,6 @@ INSTALL_REQUIRES = [
     'urllib3==1.26.6',
     'pandas',
     'spacy',
-    'es-core-news-md==3.5.0',
     'joblib',
     'scikit-learn',
     'contractions',
@@ -29,7 +28,8 @@ INSTALL_REQUIRES = [
     'numpy',
     'matplotlib',
     'Pillow',
-    'opencv-python'
+    'opencv-python',
+    'es_core_news_md==3.5.0'
 ]
 
 setup(
