@@ -1,8 +1,11 @@
 # Librerias necesarias con el fin de cumplir los requerimientos determinados para el procesamiento de texto
-import spacy, re, json, nltk, urllib, joblib,es_core_news_md
+import random
+import spacy, re, json, nltk, urllib, joblib,es_core_news_md, numpy
 from spacy import displacy
 from collections import Counter
 import pandas as pd
+import warnings
+warnings.filterwarnings('ignore')
 
 # Expresiones regular para las fechas
 __expression = r"(?i)((((ENE|FEB|MAR|ABR|MAY|JUN|JUL|AGO|SEP|OCT|NOV|DIC|enero|febrero|marzo|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|([0-9]?[0-9]?[0-9]?[0-9])))+(\s+|\s+|\s+(?=\s))?(de|/|\\|-|)?(\s+|\s+|\s+(?=\s))?((ENE|FEB|MAR|ABR|MAY|JUN|JUL|AGO|SEP|OCT|NOV|DIC|enero|febrero|marzo|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|([0-9]?[0-9]?[0-9]?[0-9])))+(\s+|\s+|\s+(?=\s))?(de|/|\\|-|)?(\s+|\s+|\s+(?=\s))?((ENE|FEB|MAR|ABR|MAY|JUN|JUL|AGO|SEP|OCT|NOV|DIC|enero|febrero|marzo|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|([0-9]?[0-9]?[0-9]?[0-9])))+))"
@@ -55,7 +58,8 @@ def __save_file(output_path, dictionary):
 # Párametros: text (texto de entrada) y output_path (dirección de salida donde se guarda el resultado)
 def ner_from_str(text, output_path):
     dictionary = __ner(text=text)
-    # model = joblib.load('/Users/julianpadilla/Desktop/EagleAndes/EagleAndes/model/modelo_clasificacion_texto.pkl')
+    model = joblib.load('./EagleAndes/models/modelo_clasificacion_texto_v2.pkl')
+    # model.predict(text) predicir el impacto
     __save_file(output_path, dictionary)
 
 # Función: Generar un archivo json con el procesamiento de texto: clasificación de impacto y NER.
