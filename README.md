@@ -23,3 +23,12 @@
     </ul>
   </li>
 </ul>
+
+<h3>Desarrollo del reto 1:</h3>
+
+<ol>
+  <li>En primer lugar empezamos por el problema de predición de categoria del textos en cuatro categorías: MINERIA, CONTAMINACION, DEFORESTACION, NINGUNA para esto empezamos por un proceso de limpieza de datos, clasificación de textos sin etiquetas en base del contexto para mejorar la precisión de predición a la hora de entrenar el modelo, 
+</li>
+  <li>En segundo lugar continuamos con el procesamiento de lenguage aplicando NER (Identificación de entidades con nombre) para esto utilizamos la libreria de SpaCy con el modelo de es_core_news_md que tiene un f1 89.54 lo cual indica un buen porcentaje de prección en base al recall y accurancy. 
+</li>
+</ol>
