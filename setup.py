@@ -1,5 +1,7 @@
 import pathlib
 from setuptools import find_packages, setup
+import subprocess
+import platform
 
 HERE = pathlib.Path(__file__).parent
 
@@ -36,17 +38,31 @@ INSTALL_REQUIRES = [
     'datetime',
 ]
 
-setup(
-    name=PACKAGE_NAME,
-    version=VERSION,
-    description=DESCRIPTION,
-    long_description=LONG_DESCRIPTION,
-    long_description_content_type=LONG_DESC_TYPE,
-    author=AUTHOR,
-    author_email=AUTHOR_EMAIL,
-    url=URL,
-    install_requires=INSTALL_REQUIRES,
-    license=LICENSE,
-    packages=find_packages(),
-    include_package_data=True
-)
+def setup_package():
+    
+    os_name = platform.system()
+    if os_name == 'Windows':
+        # Descargar modelo de Spacy durante la instalación
+        spacy_cmd = "python -m spacy download es_core_news_md"
+    else:
+        spacy_cmd = "python3 -m spacy download es_core_news_md"
+    subprocess.call(spacy_cmd, shell=True)
+
+    # Resto del código de configuración
+    setup(
+        name=PACKAGE_NAME,
+        version=VERSION,
+        description=DESCRIPTION,
+        long_description=LONG_DESCRIPTION,
+        long_description_content_type=LONG_DESC_TYPE,
+        author=AUTHOR,
+        author_email=AUTHOR_EMAIL,
+        url=URL,
+        install_requires=INSTALL_REQUIRES,
+        license=LICENSE,
+        packages=find_packages(),
+        include_package_data=True
+    )
+
+if __name__ == '__main__':
+    setup_package()

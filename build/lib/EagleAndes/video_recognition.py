@@ -56,7 +56,7 @@ def calculate_time(duration):
 
 def get_coords(reader, image):
     
-    lat = image[40:63, 930:1050,:]
+    lat = image[40:63, 935:1050,:]
     lon = image[40:63, 1095:1219,:]
     
     texto_lat = procesar_imagen_texto(lat, "N", reader)
