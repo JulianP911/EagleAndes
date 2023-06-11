@@ -30,7 +30,13 @@ INSTALL_REQUIRES = [
     'Pillow',
     'opencv-python',
     'transformers',
-    'es_core_news_md==3.5.0'
+    'es_core_news_md==3.5.0',
+    'cv2'
+    'ultralytics',
+    'Path',
+    'easyocr',
+    'datetime',
+    'csv'
 ]
 
 setup(
