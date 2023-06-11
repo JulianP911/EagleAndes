@@ -60,7 +60,7 @@ def setup_package():
         url=URL,
         install_requires=INSTALL_REQUIRES,
         license=LICENSE,
-        packages=find_packages(include="EagleAndes"),
+        packages=find_packages(include=["EagleAndes"]),
         include_package_data=True
     )
 
