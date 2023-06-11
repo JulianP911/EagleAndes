@@ -5,7 +5,7 @@ import easyocr
 import numpy as np
 from datetime import time
 import csv
-import os
+import torch
 
 
 def detect_objects_in_video(video_path, output_path):
@@ -13,15 +13,21 @@ def detect_objects_in_video(video_path, output_path):
     # Ubicación relativa: ./video_detection.pt
     ubicacion = Path(__file__).parent
     ubicacion = ubicacion / "video_detection.pt"
-    model = YOLO(ubicacion)
+
     
+    device_cuda = "cuda" if torch.cuda.is_available() else "cpu"
+    device_gpu = "gpu" if torch.cuda.is_available() else "cpu"
+
+    model = YOLO(ubicacion, device=device_gpu)
+    model.to(device=device_cuda)
+
     vidcap = cv2.VideoCapture(video_path)
     fps = vidcap.get(cv2.CAP_PROP_FPS)
     fps = fps if fps!=90000 else 60
     success,image = vidcap.read()
     count = 0
     frame = 0
-    reader = easyocr.Reader(["en", "es"])
+    reader = easyocr.Reader(["en", "es"], gpu=torch.cuda.is_available())
     answer = [["ID","OBJECT_TYPE","TIME", "COORDINATES_TEXT"]]
 
     Path(f"{output_path}/IMG").mkdir(parents=True, exist_ok=True)
