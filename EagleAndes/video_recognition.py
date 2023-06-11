@@ -10,8 +10,11 @@ import os
 
 def detect_objects_in_video(video_path, output_path):
     
-    model_path = os.path.join(os.path.dirname(__file__), "video_detection.pt")
-    model = YOLO(model)
+    # Ubicación relativa: ./video_detection.pt
+    ubicacion = Path(__file__).parent
+    ubicacion = ubicacion / "video_detection.pt"
+    model = YOLO(ubicacion)
+    
     vidcap = cv2.VideoCapture(video_path)
     fps = vidcap.get(cv2.CAP_PROP_FPS)
     fps = fps if fps!=90000 else 60
