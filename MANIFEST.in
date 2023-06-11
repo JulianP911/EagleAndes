@@ -1,1 +1,1 @@
-include models/*.pt
+include EagleAndes/models/*.pt
