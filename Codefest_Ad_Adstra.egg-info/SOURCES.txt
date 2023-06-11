@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Codefest_Ad_Adstra.egg-info/PKG-INFO
+Codefest_Ad_Adstra.egg-info/SOURCES.txt
+Codefest_Ad_Adstra.egg-info/dependency_links.txt
+Codefest_Ad_Adstra.egg-info/requires.txt
+Codefest_Ad_Adstra.egg-info/top_level.txt
+EagleAndes/__init__.py
+EagleAndes/text_recognition.py
+EagleAndes/video_recognition.py
