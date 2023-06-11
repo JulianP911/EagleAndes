@@ -60,7 +60,6 @@ def setup_package():
         url=URL,
         install_requires=INSTALL_REQUIRES,
         license=LICENSE,
-        packages=find_packages(),
         include_package_data=True
     )
 
