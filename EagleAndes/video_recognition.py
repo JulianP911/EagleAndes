@@ -14,11 +14,9 @@ def detect_objects_in_video(video_path, output_path):
     ubicacion = Path(__file__).parent
     ubicacion = ubicacion / "video_detection.pt"
 
-    
     device_cuda = "cuda" if torch.cuda.is_available() else "cpu"
-    device_gpu = "gpu" if torch.cuda.is_available() else "cpu"
 
-    model = YOLO(ubicacion, device=device_gpu)
+    model = YOLO(ubicacion)
     model.to(device=device_cuda)
 
     vidcap = cv2.VideoCapture(video_path)
