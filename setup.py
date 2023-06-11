@@ -6,7 +6,7 @@ import platform
 HERE = pathlib.Path(__file__).parent
 
 VERSION = '0.0.1'
-PACKAGE_NAME = 'Codefest Ad Adstra'
+PACKAGE_NAME = 'Codefest_Ad_Adstra'
 AUTHOR = 'EagleAndes'
 AUTHOR_EMAIL = 'eagleandes@uniandes.com'
 URL = 'https://github.com/JulianP911/EagleAndes'
