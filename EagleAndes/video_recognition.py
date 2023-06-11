@@ -5,11 +5,13 @@ import easyocr
 import numpy as np
 from datetime import time
 import csv
+import os
 
 
 def detect_objects_in_video(video_path, output_path):
     
-    model = YOLO("video_detection.pt")
+    model_path = os.path.join(os.path.dirname(__file__), "video_detection.pt")
+    model = YOLO(model)
     vidcap = cv2.VideoCapture(video_path)
     fps = vidcap.get(cv2.CAP_PROP_FPS)
     fps = fps if fps!=90000 else 60
