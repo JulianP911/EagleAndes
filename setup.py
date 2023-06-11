@@ -24,7 +24,7 @@ INSTALL_REQUIRES = [
     'inflect',
     'nltk',
     'wordcloud',
-    'tensorflow',
+    "dill"
     'numpy',
     'matplotlib',
     'Pillow',
