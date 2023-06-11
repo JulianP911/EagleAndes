@@ -9,7 +9,7 @@ import csv
 
 def detect_objects_in_video(video_path, output_path):
     
-    model = YOLO("./EagleAndes/models/video_detection.pt")
+    model = YOLO("./EagleAndes/video_detection.pt")
     vidcap = cv2.VideoCapture(video_path)
     fps = vidcap.get(cv2.CAP_PROP_FPS)
     fps = fps if fps!=90000 else 60
