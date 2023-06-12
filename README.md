@@ -23,6 +23,7 @@
    ```
   - Esta función recibe como parámetros de entrada la ruta de el video a analizar y la ruta de la carpeta donde se va a almacenar el archivo .csv de salida y las imágenes segmentadas.
   - Esta función analiza el video tomando un fotograma cada 5 segundos. Cada fotograma se ve como una imagen y se le envía a un modelo preentrenado para que segmenete algún tipo de vía, construcción, vehículo, etc. En caso de que se detecte algo en el fotograma, la información de lo detectado será almacenada en un archivo llamado results.csv, y los fotogramas segmentados y clasificados se almacenaran en una carpeta de nombre IMG.
+  - Se puede ver un ejemplo de como utilizar la librería en el archivo [test_video.py](test_video.py).
 
 <h3>Desarrollo del reto 1:</h3>
 
