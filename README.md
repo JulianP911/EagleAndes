@@ -81,10 +81,7 @@
 
 <h3>Instrucciones para correr la librería de python:</h3>
 <ul>
-  <li>Clonar el repositorio en la carpeta de su preferencia.</li>
-  <li>Abrir el proyecto en el editor de preferencia (recomendado <b>Visual Studio Code</b>).</li>
-  <li>Abrir la consola e ingresar el comando <code>pip3 install . o pip install .</code> (dependiendo del sistema operativo) para instalar las dependencias asociadas a los recursos empleados definidos en el archivo <code>setup.py</code>. Asimismo, ingresar el comando para instalar el modelo para el manejo de NER con <code>python -m spacy download es_core_news_md o python3 -m spacy download es_core_news_md</code> dependiendo del sistema operativo.</li>
-  <li>Una vez descargado las dependencias necesarias crear un archivo py en la cual se importe la libreria y las funciones requeridas que se quiere aceder. A continuación, se muestra un ejemplo correspondientemente:
+<li>Una vez instalada la libería junto con las dependencias necesarias crear un archivo py en la cual se importe la libreria y las funciones requeridas que se quiere aceder. A continuación, se muestra un ejemplo correspondientemente:
     <ul>
       <li><code>from EagleAndes import ner_from_str</code><br><code>ner_from_str('Texto ejemplo', './output.json')</code>
       </li>
