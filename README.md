@@ -5,13 +5,16 @@
 <h1>Instalación</h1>
 
 <h3>Instalación en local:</h3>
-
+<ul>
   <li>Clonar el repositorio en la carpeta de su preferencia <code>git clone https://github.com/JulianP911/EagleAndes.git</code> .</li> 
   <li>Abrir el proyecto en el editor de preferencia (recomendado <b>Visual Studio Code</b>).</li>
   <li>Abrir la consola e ingresar el comando <code>pip3 install . o pip install .</code> (dependiendo del sistema operativo) para instalar las dependencias asociadas a los recursos empleados definidos en el archivo
-  
+</ul>
+
 <h3>Instalación de la librería:</h3>
+<ul>
   <li>Instalar la libreria mediante pip y el repositorio de github <code>pip install git+https://github.com/JulianP911/EagleAndes.git </code>.</li>   
+</ul>
 
 <h1>Reto 1 - Indetificación de objetos de interés en videos</h1>
 
