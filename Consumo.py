@@ -7,3 +7,9 @@ video_path = 'data/videos/VideoCodefest_005-2min.mpg'
 output_path = "pruebas_output"
 
 detect_objects_in_video(video_path, output_path)
+
+from EagleAndes import ner_from_str,ner_from_url,ner_from_file
+
+ner_from_str("Investigación demuestra que la Amazonia colombiana está contaminada por mercurio...Un estudio científico confirmó que 24 departamentos de Colombia enfrentan la contaminación por mercurio y en especial el área cercana a los Andes, donde precisamente se desarrolla la minería ilegal. Sin embargo, esta no es la única causa, según el estudio denominado “Contaminación por Mercurio en Ecosistemas Acuáticos de Colombia” a cargo del Instituto Sinchi de Colombia.", './output.json')
+# ner_from_url("https://www.eltiempo.com/vida/amazonia-deforestacion-mineria-agricultura-y-cultivos-ilicitos-577528",'./output.json')
+# ner_from_file('./prueba.txt','./output.json')

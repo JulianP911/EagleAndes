@@ -36,6 +36,10 @@ INSTALL_REQUIRES = [
     'Path',
     'easyocr',
     'datetime',
+    'es_core_news_md==3.5.0',
+    'stopwords',
+    'inflect',
+    'nltk'
 ]
 
 def setup_package():
