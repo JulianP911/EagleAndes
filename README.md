@@ -10,7 +10,7 @@
   - Abrir la consola e ingresar el comando `pip3 install .`  o `pip install .` (dependiendo del sistema operativo) para instalar las dependencias asociadas a los recursos empleados definidos en el archivo
 
 ### Instalación de la librería:
-  - Instalar la libreria mediante pip y el repositorio de github `pip install git+https://github.com/JulianP911/EagleAndes.git`
+  - Instalar la libreria mediante pip y el repositorio de github `pip install git+https://github.com/JulianP911/EagleAndes.git` (Este proceso de instalación puede tarda entre 5 a 10 min)
 
 # Reto 1 - Indetificación de objetos de interés en videos
 
