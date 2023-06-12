@@ -167,6 +167,7 @@ def __ner(text):
 
     X_data= text
     new_X_train = pd.Series(X_data)
+    nltk.download('all')
     try:
         new_X_train = new_X_train.apply(contractions.fix) # Corregir las contracciones
         new_X_train = new_X_train.apply(word_tokenize) #  Tokenizar
