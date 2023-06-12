@@ -167,11 +167,20 @@ def __ner(text):
 
     X_data= text
     new_X_train = pd.Series(X_data)
-    new_X_train = new_X_train.apply(contractions.fix) # Corregir las contracciones
-    new_X_train = new_X_train.apply(word_tokenize) #  Tokenizar
-    new_X_train = new_X_train.apply(lambda x: preproccesing(x)) # Preprocesamiento
-    new_X_train = new_X_train.apply(lambda x: stem_and_lemmatize(x)) # Aplicar la raíz y la lematización
-    new_X_train = new_X_train.apply(lambda x: ' '.join(map(str, x))) # Convertir la lista de palabras en una cadena de texto
+    try:
+        new_X_train = new_X_train.apply(contractions.fix) # Corregir las contracciones
+        new_X_train = new_X_train.apply(word_tokenize) #  Tokenizar
+        new_X_train = new_X_train.apply(lambda x: preproccesing(x)) # Preprocesamiento
+        new_X_train = new_X_train.apply(lambda x: stem_and_lemmatize(x)) # Aplicar la raíz y la lematización
+        new_X_train = new_X_train.apply(lambda x: ' '.join(map(str, x))) # Convertir la lista de palabras en una cadena de texto
+    except:
+        print("Instalando dependencia necesaria... / Solo ocurre una vez")
+        nltk.download('all')
+        new_X_train = new_X_train.apply(contractions.fix) # Corregir las contracciones
+        new_X_train = new_X_train.apply(word_tokenize) #  Tokenizar
+        new_X_train = new_X_train.apply(lambda x: preproccesing(x)) # Preprocesamiento
+        new_X_train = new_X_train.apply(lambda x: stem_and_lemmatize(x)) # Aplicar la raíz y la lematización
+        new_X_train = new_X_train.apply(lambda x: ' '.join(map(str, x))) # Convertir la lista de palabras en una cadena de texto
     vectors = vectorizer.transform(new_X_train)
     copia=vectors
     copia=pd.DataFrame.sparse.from_spmatrix(copia)

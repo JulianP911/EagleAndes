@@ -38,7 +38,8 @@ INSTALL_REQUIRES = [
     'datetime',
     'stopwords',
     'inflect',
-    'nltk'
+    'nltk',
+    'bs4'
 ]
 
 def setup_package():
