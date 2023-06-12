@@ -62,9 +62,10 @@
 </li>
   <li>Un punto intermedio entre el etiquetado de datos y el modelado de un RandomForest fue el preprocesamiento , en el cuál se realizó todo los tipos de procesos necesarios de limpieza para un modelo lo más óptimo posible cuando se trata de texto. Se realizaron procesos de convertir todos los carácteres a minísculas, convertir a lenguaje natural los números que aparecen en el texto, eliminar la puntuación de las palabras, eliminar los carácteres ASCII, eliminar palabras que no son relevantes en el contexto del problema como por ejemplo artículos personales, se aplicó un proceso de lematización de las palabras  y finalmente se listaron las palabras de manera tokenizada. Todo lo anterior para poder tener un modelo de RandomForest de la mejor manera construida.
 </li> 
-  <li>En tercer lugar, continuamos con el procesamiento de lenguage aplicando NER (Identificación de entidades con nombre) para esto utilizamos la libreria de SpaCy con el modelo de es_core_news_md que tiene un f1 89.54 lo cual indica un buen porcentaje de prección en base al recall y accuracy para 4 de las 5 clases que se pedían obtener una posible clasificación. 
-</li>
-  
- <li>Finalmente, para la identificación de fechas se creó una fórmula regex para poder identificar este tipo de entidades que tienen muchísimas tipo de variables posibles.
+  <li>En tercer lugar, continuamos con el procesamiento de lenguage aplicando NER (identificación de entidades con nombre) para esto utilizamos la libreria de SpaCy con el modelo de es_core_news_md que tiene un f1 89.54 lo cual indica un buen porcentaje de precisión en base al recall y accuracy. Una vez teniendo en base el modelo, se definieron dos reglas adicionales con el fin de abordar los requerimientos adiciones:
+    <ul>
+      <li><b>Identificación de fechas:</b> Para cumplir con este próposito se creó una fórmula regex con el fin de identificar este tipo de entidades que tienen diversas combinaciones posibles.</li>
+      <li><b>Identificación de palabras del contexto:</b> Para cumplir con este próposito se creó un diccionario con múltiples palabras claves a reconocer en base a las problemáticas que afronta la Amazonia colombiana.</li>
+    </ul>
 </li>
 </ol>
