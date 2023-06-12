@@ -48,9 +48,13 @@ def setup_package():
     if os_name == 'Windows':
         # Descargar modelo de Spacy durante la instalación
         spacy_cmd = "python -m spacy download es_core_news_md"
+        ntlk_cmd = "python -m nltk.downloader all"
     else:
         spacy_cmd = "python3 -m spacy download es_core_news_md"
+        ntlk_cmd = "python3 -m nltk.downloader all"
+
     subprocess.call(spacy_cmd, shell=True)
+    subprocess.call(ntlk_cmd, shell=True)
 
     # Resto del código de configuración
     setup(
