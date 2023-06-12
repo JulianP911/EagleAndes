@@ -16,6 +16,7 @@
 <h1>Reto 1 - Indetificación de objetos de interés en videos</h1>
 
 <h3>Instrucciones para correr la librería de python:</h3>
+<ul>
   <li>Una vez instalada la libería junto con las dependencias necesarias crear un archivo py en la cual se importe la libreria y las funciones requeridas que se quiere aceder. A continuación, se muestra un ejemplo correspondientemente:
     <ul>
       <li><code>from EagleAndes import detect_objects_in_video</code><br><code>detect_objects_in_video('./video_path', './output_path')</code>
