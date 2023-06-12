@@ -2,33 +2,28 @@
 
 📊 Codefest Ad Astra 2023
 
-<h1>Instalación</h1>
+# Instalación
 
-<h3>Instalación en local:</h3>
-<ul>
-  <li>Clonar el repositorio en la carpeta de su preferencia <code>git clone https://github.com/JulianP911/EagleAndes.git</code> .</li> 
-  <li>Abrir el proyecto en el editor de preferencia (recomendado <b>Visual Studio Code</b>).</li>
-  <li>Abrir la consola e ingresar el comando <code>pip3 install . o pip install .</code> (dependiendo del sistema operativo) para instalar las dependencias asociadas a los recursos empleados definidos en el archivo
-</ul>
+### Instalación en local:
+  - Clonar el repositorio en la carpeta de su preferencia `git clone https://github.com/JulianP911/EagleAndes.git`
+  - Abrir el proyecto en el editor de preferencia (recomendado <b>Visual Studio Code</b>).
+  - Abrir la consola e ingresar el comando `pip3 install .`  o `pip install .` (dependiendo del sistema operativo) para instalar las dependencias asociadas a los recursos empleados definidos en el archivo
 
-<h3>Instalación de la librería:</h3>
-<ul>
-  <li>Instalar la libreria mediante pip y el repositorio de github <code>pip install git+https://github.com/JulianP911/EagleAndes.git </code>.</li>   
-</ul>
+### Instalación de la librería:
+  - Instalar la libreria mediante pip y el repositorio de github `pip install git+https://github.com/JulianP911/EagleAndes.git`
 
-<h1>Reto 1 - Indetificación de objetos de interés en videos</h1>
+# Reto 1 - Indetificación de objetos de interés en videos
 
-<h3>Instrucciones para correr la librería de python:</h3>
-<ul>
-  <li>Una vez instalada la libería junto con las dependencias necesarias crear un archivo py en la cual se importe la libreria y las funciones requeridas que se quiere aceder. A continuación, se muestra un ejemplo correspondientemente:
-    <ul>
-      <li><code>from EagleAndes import detect_objects_in_video</code><br><code>detect_objects_in_video('./video_path', './output_path')</code>
-      </li>
-    </ul>
-  </li>
-  <li> Esta función recibe como parámetros de entrada el video a analizar y la ruta donde se va a almacenar el archivo de salida. (...)
-  </li>
-</ul>
+### Instrucciones para correr la librería de python:
+  - Una vez instalada la librería junto con las dependencias necesarias crear un archivo py en la cual se importe la libreria y las funciones requeridas que se quiere aceder. A continuación, se muestra un ejemplo correspondientemente:
+   ```
+      from EagleAndes import detect_objects_in_video 
+      
+      detect_objects_in_video('./video_path', './output_path')
+   ```
+  - Esta función recibe como parámetros de entrada la ruta de el video a analizar y la ruta de la carpeta donde se va a almacenar el archivo .csv de salida y las imágenes segmentadas.
+  - Esta función analiza el video tomando un fotograma cada 5 segundos. Cada fotograma se ve como una imagen y se le envía a un modelo preentrenado para que segmenete algún tipo de vía, construcción, vehículo, etc. En caso de que se detecte algo en el fotograma, la información de lo detectado será almacenada en un archivo llamado results.csv, y los fotogramas segmentados y clasificados se almacenaran en una carpeta de nombre IMG.
+  - Se puede ver un ejemplo de como utilizar la librería en el archivo [test_video.py](test_video.py).
 
 <h3>Desarrollo del reto 1:</h3>
 
