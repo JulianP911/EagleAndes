@@ -109,7 +109,6 @@
 </li> 
   <li>En tercer lugar, continuamos con el procesamiento de lenguage aplicando NER (Identificación de entidades con nombre) para esto utilizamos la libreria de SpaCy con el modelo de es_core_news_md que tiene un f1 89.54 lo cual indica un buen porcentaje de prección en base al recall y accuracy para 4 de las 5 clases que se pedían obtener una posible clasificación. 
 </li>
-  
- <li>Finalmente, para la identificación de fechas se creó una fórmula regex para poder identificar este tipo de entidades que tienen muchísimas tipo de variables posibles.
+ <li>Por último, tanto el modelo de clasificación de impacto como el modelo NER fueron unificados en la librería para resolver el reto 2.
 </li>
 </ol>
